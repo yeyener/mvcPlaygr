@@ -29,6 +29,8 @@ namespace MvcMovie.Controllers
                 movies = movies.Where(s => s.Title.Contains(searchString));
             }
 
+            int i = 1;
+
             return View(await movies.ToListAsync());
         }
 
